@@ -4,6 +4,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>
@@ -12,11 +13,19 @@
             $("#wrapper").toggleClass("toggled");
         });
         
-        $('.datepicker').datepicker();
         
+        // Firing bootstrap datepicker
         $('.input-group.date').datepicker({
             format: "dd-mm-yy",
             todayHighlight: true
+        });
+        
+        // Firing bootstrap select
+        $('.selectpicker').selectpicker();
+        
+         $('.selectpicker').selectpicker({
+            style: 'btn-info',
+            size: 10
         });
     </script>
     

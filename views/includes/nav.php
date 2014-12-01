@@ -14,6 +14,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="../css/bootstrap-select.min.css" rel="stylesheet">
     <!--<link href="../css/custom_forms.css" rel="stylesheet">-->
 
     <!-- Custom CSS -->
