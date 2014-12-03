@@ -42,22 +42,22 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Tickets</a>
+                    <a href="new_ticket.php">Tickets</a>
                 </li>
                 <li>
-                    <a href="#">Expenses</a>
+                    <a href="new_expense.php">Expenses</a>
                 </li>
                 <li>
-                    <a href="#">Assets</a>
+                    <a href="new_asset.php">Assets</a>
                 </li>
                 <li>
-                    <a href="#">Staff</a>
+                    <a href="new_staff.php">Staff</a>
                 </li>
                 <li>
-                    <a href="#">Clients</a>
+                    <a href="new_client.php">Clients</a>
                 </li>
                 <li>
-                    <a href="#">Travel Routes</a>
+                    <a href="new_route.php">Travel Routes</a>
                 </li>
             </ul>
         </div>
