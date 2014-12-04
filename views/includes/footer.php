@@ -5,6 +5,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-datepicker.js"></script>
     <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/ajaxFunctions.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>

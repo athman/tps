@@ -30,7 +30,7 @@
         }
         
         else{
-            $msgClass="alert-error";
+            $msgClass="alert-danger";
             $msg="Could not register client now!";
 
         }
@@ -66,7 +66,7 @@
                         
                         <input class="form-control" id="phone_number" name="phone_number" placeholder="phone number" required="required" type="text" />
                         
-                        <input class="form-control" id="id_number" name="id_number" placeholder="id number" required="required" type="text" />
+                        <input class="form-control" id="id_number" name="id_number" placeholder="id number" max="99999999" required="required" type="text" />
                         
                         <div class="input-group date">
                             <input type="text" class="form-control" name="registration_date" id="registration_date" placeholder="registration date"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>

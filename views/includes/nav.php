@@ -37,29 +37,58 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a href="index.php">
                         Fleet Company
                     </a>
                 </li>
-                <li>
-                    <a href="new_ticket.php">Tickets</a>
+				<li>
+                    <a href="new_client.php">Add Client</a>
+                </li>
+				<li>
+                    <a href="new_route.php">Add Travel Route</a>
                 </li>
                 <li>
-                    <a href="new_expense.php">Expenses</a>
+                    <a href="new_ticket.php">Sell Ticket</a>
+                </li>
+				<li>
+                    <a href="new_role.php">Add Job Role</a>
+                </li>
+				<li>
+                    <a href="new_staff.php">Add Staff</a>
+                </li>
+				<li>
+                    <a href="new_asset.php">Add Asset</a>
+                </li>
+				
+                <li>
+                    <a href="new_expense.php">Record an Expense</a>
+                </li>
+                
+                
+                <li>
+                    <a href="view_tickets.php">View Tickets</a>
                 </li>
                 <li>
-                    <a href="new_asset.php">Assets</a>
+                    <a href="view_expenses.php">View Expenses</a>
                 </li>
                 <li>
-                    <a href="new_staff.php">Staff</a>
+                    <a href="view_assets.php">View Assets</a>
                 </li>
                 <li>
-                    <a href="new_client.php">Clients</a>
+                    <a href="view_staff.php">View Staff</a>
                 </li>
                 <li>
-                    <a href="new_route.php">Travel Routes</a>
+                    <a href="view_clients.php">View Clients</a>
+                </li>
+                <li>
+                    <a href="view_routes.php">View Travel Routes</a>
+                </li>
+                <li>
+                    <a href="view_roles.php">View Roles</a>
                 </li>
             </ul>
+            
+            
         </div>
         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="margin: 0;" >>></a>
         <!-- /#sidebar-wrapper -->

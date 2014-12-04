@@ -50,8 +50,13 @@ class connection{
             if( ($errors = sqlsrv_errors() ) != null)
               {
                  $errorMsg="message: ".$errors[0][ 'message']."</br>";
-                    echo $errorMsg;
+                  echo '<div class="alert alert-danger">
+                                        <a href="#" class="close" data-dismiss="alert">&times</a>
+                                       '.$errorMsg.'
+                                    </div>'; 
+                 
               }
+            return "false";
 
         }
          else{
