@@ -16,7 +16,7 @@ $(document).ready(function()
                        $parent.fadeOut(100); 
                     }
                     else
-                        alert("Cannot delete ticketId "+id+".\nIt may be referenced by another record");
+                        alert("Cannot delete clientId "+id+".\nIt may be referenced by another record or user does not have delete permissions");
                     
                 }
         });
@@ -41,7 +41,7 @@ $(document).ready(function()
                        $parent.fadeOut(100); 
                     }
                     else
-                        alert("Cannot delete expenseId "+id+".\nIt may be referenced by another record");
+                        alert("Cannot delete clientId "+id+".\nIt may be referenced by another record or user does not have delete permissions");
                     
                 }
         });
@@ -66,7 +66,7 @@ $(document).ready(function()
                        $parent.fadeOut(100); 
                     }
                     else
-                       alert("Cannot delete assetId "+id+".\nIt may be referenced by another record");
+                        alert("Cannot delete clientId "+id+".\nIt may be referenced by another record or user does not have delete permissions");
                     
                 }
         });
@@ -91,7 +91,7 @@ $(document).ready(function()
                        $parent.fadeOut(100); 
                     }
                     else
-                        alert("Cannot delete staffId "+id+".\nIt may be referenced by another record");
+                         alert("Cannot delete clientId "+id+".\nIt may be referenced by another record or user does not have delete permissions");
                     
                 }
         });
@@ -116,7 +116,7 @@ $(document).ready(function()
                        $parent.fadeOut(100); 
                     }
                     else
-                        alert("Cannot delete clientId "+id+".\nIt may be referenced by another record");
+                        alert("Cannot delete clientId "+id+".\nIt may be referenced by another record or user does not have delete permissions");
                     
                 }
         });
@@ -141,7 +141,7 @@ $(document).ready(function()
                        $parent.fadeOut(100); 
                     }
                     else
-                        alert("Cannot delete routeId "+id+".\nIt may be referenced by another record");
+                         alert("Cannot delete clientId "+id+".\nIt may be referenced by another record or user does not have delete permissions");
                     
                 }
         });
@@ -166,10 +166,57 @@ $(document).ready(function()
                        $parent.fadeOut(100); 
                     }
                     else
-                       alert("Cannot delete roleId "+id+".\nIt may be referenced by another record");
+                        alert("Cannot delete clientId "+id+".\nIt may be referenced by another record or user does not have delete permissions");
                     
                 }
         });
+            
+        return false;
+    });
+	
+	
+	  //login
+    $('#btn-login').click(function(){
+        
+     	var username=$.trim($("#username").val());
+        var password=$.trim($("#password").val());
+		if(username.length>0 && password.length>0){
+			  var dataString = 'action=login&username='+username+'&password='+password;
+			 $("#login-alert").text();
+					   $("#login-alert").css('visibility','visible');
+			 $.ajax({
+                type: "POST",
+                url: "utilities/usermanager.php",
+                data: "action=login&username="+username+"&password="+password,
+                cache: false,
+                success: function(data){
+					
+					//login success
+                   if(data=='SUCCESS_LOGIN'){
+					    
+					   $("#login-alert").css('color','green');
+					   $("#login-alert").text('Login successful, '+username+'. Redirecting...');
+					   $("#login-alert").css('visibility','visible');
+					   window.location.href = "index.php";
+				   }
+					else{
+						$("#login-alert").css('color','red');
+					   $("#login-alert").text('Login failed. Confirm username or password.');
+					   $("#login-alert").css('visibility','visible');
+						
+						
+					}
+                    
+                }
+        });
+			
+		}
+		
+		else{
+			alert ("fill up the places");	
+		}
+       
+       		
             
         return false;
     });

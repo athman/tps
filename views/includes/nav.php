@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+require_once "classUserManager.php";
+$usermanager=new userManager();
+
+//Session doesnt exist
+if($usermanager->isSessionValid() == false){
+  header('Location: login.php');
+die();
+}
+
+
+?>
 <html lang="en">
 
 <head>
@@ -85,6 +97,9 @@
                 </li>
                 <li>
                     <a href="view_roles.php">View Roles</a>
+                </li>
+				<li>
+                    <a href="logout.php">Logout <span style="font-size: 10px">[<?php echo $_SESSION["username"]; ?>]</span></a>
                 </li>
             </ul>
             

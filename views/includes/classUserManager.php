@@ -3,7 +3,7 @@ require_once "classConnection.php";
 class userManager{
     var $username;
     var $password;
-    var sessionTime;
+    var $sessionTime;
     
     //constructor
     function __construct(){
@@ -19,7 +19,7 @@ class userManager{
         
         //successful login
         if($loginStatus === true){
-            echo "Loged in!";    
+            echo "SUCCESS_LOGIN";    
             $this->username=$connection->username;
             $this->password=$connection->password;
             $this->createSession();
@@ -33,8 +33,9 @@ class userManager{
     
     
     //sign up
-    function signup(){
-        
+    function logout(){
+      	session_destroy();
+        echo "SUCCESS_LOGOUT";
         
     }
     

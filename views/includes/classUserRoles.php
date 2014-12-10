@@ -5,7 +5,11 @@ class userFunctions{
     
     //constructor
     function __construct(){
-        $connection=new connection("Brayo","password");
+        //get connection credentials from session
+		$user=$_SESSION['username'];
+		$password=$_SESSION['password'];
+		
+        $connection=new connection($user,$password);
         $loginStatus=$connection->connectToDatabase();
         
         //successful login
